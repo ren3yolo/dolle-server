@@ -10,8 +10,9 @@ module.exports = async (req, res, next) => {
 
     const response = await openai.createImage({
       prompt: req.query.prompt,
-      n: 2,
+      n: 4,
       size: "256x256",
+      response_format: "b64_json",
     });
 
     return res.status(200).send({ success: true, message: response.data.data });

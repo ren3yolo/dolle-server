@@ -8,6 +8,6 @@ router.get("/", getAllPosts);
 
 router.get("/generate", getImages);
 
-router.post("/image", postImage);
+router.post("/post", postImage);
 
 module.exports = router;
